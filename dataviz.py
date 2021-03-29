@@ -13,10 +13,13 @@ import pandas as pd
 
 sns.set_style("white")
 
+# TODO: implement CLI
+
 # Upload the data
 journal = "TCH"
 data = pd.read_csv("articles_data/articles" + journal.upper() + ".csv", delimiter=";")
 # Select articles only
+# TODO: turn into python function
 articles = data[data.type == "article"]
 # Drop NA years
 articles = articles.dropna(subset=["date"])
