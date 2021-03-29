@@ -33,7 +33,7 @@ if __name__ == "__main__":
         logging = 0
     # Currently accepted journals are JQT, TCH, ASA, JAS, QEN
     if journal not in ["JQT", "TCH", "ASA", "JAS", "QEN"]:
-        raise ValueError("Unknown journal")
+        raise ValueError(f"Unknown journal: {journal}")
     # %% Journal-specific variables
     if journal.upper() == "JAS":
         url_journal_prefix = "c"
@@ -89,7 +89,7 @@ if __name__ == "__main__":
                 if verbose:
                     print("Error 404: page not found")
                 if logging:
-                    print("\tError 404: page not found\n")
+                    log.write("\tError 404: page not found\n")
             else:
                 if verbose:
                     print(f"Unsucessful page status: {page.status_code}")
