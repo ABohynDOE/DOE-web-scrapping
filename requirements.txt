@@ -1,0 +1,4 @@
+urllib==3.9.2
+BeautifulSoup==4.9.0
+requests==2.25.1
+pandas==1.2.3
